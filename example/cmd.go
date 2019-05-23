@@ -45,7 +45,16 @@ func main() {
 			continue
 		}
 
-		fmt.Println(key)
+		fmt.Println("Version.............:", key.Version)
+		fmt.Println("Checksum............:", hex.EncodeToString(key.Checksum[:]))
+		fmt.Println("Public Name.........:", key.PublicName)
+		fmt.Println("Keys................:", key.Keys)
+		fmt.Println("Cipher Suites.......:", key.CipherSuites)
+		fmt.Println("Padded Length.......:", key.PaddedLength)
+		fmt.Println("Not Before..........:", key.NotBefore)
+		fmt.Println("Not After...........:", key.NotAfter)
+		fmt.Println("Extensions..........:", key.Extensions)
+
 		fmt.Println("-----------")
 	}
 }
